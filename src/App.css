@@ -1,0 +1,90 @@
+.background {
+    display: flex;
+    justify-content: center;
+    margin-top: 30px;
+}
+
+.board {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 500px;
+    height: 550px;
+    background: darkgrey;
+    border: 2px solid black;
+    border-radius: 4px;
+    padding: 10px;
+}
+
+.shuffle-btn {
+    text-align: center;
+    width: 90px;
+    height: auto;
+    padding: 8px;
+    border: 1px solid black;
+    border-radius: 4px;
+    font-family: 'Open Sans', sans-serif;
+    font-size: 20px;
+    margin: 20px;
+    cursor: pointer;
+    background-color: lightgray;
+}
+
+.tiles {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 77px;
+    height: 77px;
+    margin: 2px;
+    background-color: color;
+    border: 1px solid black;
+    border-radius: 5px;  
+    font-family: 'Open Sans', sans-serif;
+    font-size: 30px;
+}
+
+.new-game {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-content: center;
+
+}
+
+.new-game-btn {
+    text-align: center;
+    width: 180px;
+    height: auto;
+    padding: 8px;
+    border: 1px solid black;
+    border-radius: 4px;
+    font-family: 'Open Sans', sans-serif;
+    font-size: 20px;
+    margin: 20px;
+    cursor: pointer;
+    background-color: lightgray;
+}
+
+h1 {
+    text-align: center;
+    font-family: 'Open Sans', sans-serif;
+}
+
+@media (min-width: 651px) {
+    .board {
+        width: 70vw;
+        height: 75vw;
+        max-width: 600px;
+        max-height: 650px;
+    } 
+    .tiles {
+    width: 11vw;
+    height: 11vw;
+    max-width: 120px;
+    max-height: 120px;
+    }
+
+   
+}
