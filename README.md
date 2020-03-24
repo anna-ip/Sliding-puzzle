@@ -1,19 +1,15 @@
-# Technigo React Starter App
+# n-puzzle
 
-This app has been generated using `create-react-app`, then cleaned up a little so we have a project with just the elements we need to get started.
+A sliding puzzle that consists of a frame of numbered square tiles in random order with one tile missing, that will be solved when all tiles are in ascending order.
 
-Add components in the `src` folder and use them in `src/app.js` to get started.
 
-## Usage
 
-1. On GitHub, click the 'use this template' button to create a new repo on your account
-1. Clone the new repo to your computer
-1. Install required dependencies with npm: `npm install`
-1. Start the project: `npm start`
+# Tech
+React
+JSX
 
-Alternatively, if you don't want a new git repo on your account;
+# Build
+npm install
+npm start
 
-1. Download & extract the [latest release](https://github.com/Technigo/react-starter/releases/latest) from GitHub
-1. Open the directory in the terminal: `cd /path/to/react-starter`
-1. Install required dependencies with npm: `npm install`
-1. Start the project: `npm start`
+
