@@ -8,4 +8,8 @@ A sliding puzzle that consists of a frame of numbered square tiles in random ord
 React
 JSX
 
+# Build
+npm install
+npm start
+
 
