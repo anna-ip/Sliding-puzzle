@@ -23,13 +23,13 @@ const getShuffledPuzzle = () => {
   return [rowOne, rowTwo, rowThree]
 }
 
-const flattenArray = arr => {
+const flattenArray = (arr) => {
+  console.log(Array.isArray(arr), arr)
   return arr.reduce((flatArr, subArr) => flatArr.concat(subArr), [])
-}
+};
 
 const getInversionCount = arr => {
   arr = flattenArray(arr).filter(n => n !== 0)
-
   const inversions = [];
 
   for (let i = 0; i < arr.length - 1; i++) {
@@ -47,13 +47,13 @@ const getInversionCount = arr => {
 
 const isSolvable = puzzle => {
   return getInversionCount(puzzle) % 2 === 0
-}
+};
 
 const getPuzzle = () => {
   let puzzle = getShuffledPuzzle()
 
   while (!isSolvable(puzzle)) {
-    puzzle = getShuffledPuzzle
+    puzzle = getShuffledPuzzle()
   }
   return puzzle
 }
