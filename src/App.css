@@ -17,6 +17,10 @@
     padding: 10px;
 }
 
+.puzzle {
+    display: flex;
+}
+
 .shuffle-btn {
     text-align: center;
     width: 90px;

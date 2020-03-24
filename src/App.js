@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from 'react'
 import './App.css'
 
-//gives a random board/puzzle with 3x3 tiles
+
 const getShuffledPuzzle = () => {
   const values = [0, 1, 2, 3, 4, 5, 6, 7, 8];
 
@@ -9,6 +9,7 @@ const getShuffledPuzzle = () => {
     rowTwo = [],
     rowThree = [];
 
+  // gives a random board/puzzle with 3x3 tiles
   while (values.length) {
     const random = Math.floor(Math.random() * values.length)
 
@@ -61,7 +62,7 @@ const getPuzzle = () => {
 export const App = () => {
   const [puzzle, setPuzzle] = useState([])
   const [complete, setComplete] = useState(false)
-  const [moves, setMoves] = useState(0)
+  //const [moves, setMoves] = useState(0)
 
   useEffect(() => {
     setPuzzle(getPuzzle())
@@ -94,7 +95,7 @@ export const App = () => {
           newPuzzle[x][y] = 0
         }
         setPuzzle(newPuzzle)
-        setMoves(moves + 1)
+        //setMoves(moves + 1)
         checkCompletion(newPuzzle)
       }
     }
@@ -123,7 +124,7 @@ export const App = () => {
   const resetPuzzle = () => {
     setComplete(false)
     setPuzzle(getPuzzle())
-    setMoves(0)
+    //setMoves(0)
   }
 
 
@@ -134,17 +135,17 @@ export const App = () => {
 
 
         {puzzle.map((row, i) => (
-          <div key={i} style={{ display: 'flex' }}>
+          <div key={i} className="puzzle">
             {row.map((col, j) => {
+
               const color = col === 0 ? 'transparent' : 'lightgray'
               return (
                 <div className='tiles' key={`${i}-${j}`} onClick={() => movePiece(i, j)}
                   style={{
                     backgroundColor: color,
                     cursor: complete ? 'not-allowed' : 'pointer',
-                    userSelect: 'none'
                   }}>
-                  <span style={{ fontFamily: 'Open Sans' }}> {col !== 0 && col}</span>
+                  <span> {col !== 0 && col}</span>
 
                 </div>
               )
